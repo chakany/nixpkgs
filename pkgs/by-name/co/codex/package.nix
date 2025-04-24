@@ -7,18 +7,18 @@
 
 buildNpmPackage rec {
   pname = "codex";
-  version = "0.1.2504161510"; # from codex-cli/package.json
+  version = "0.1.2504221401"; # from codex-cli/package.json
 
   src = fetchFromGitHub {
     owner = "openai";
     repo = "codex";
-    rev = "b0ccca555685b1534a0028cb7bfdcad8fe2e477a";
-    hash = "sha256-WTnP6HZfrMjUoUZL635cngpfvvjrA2Zvm74T2627GwA=";
+    rev = "12bc2dcc4e525154d32a1c5c070dc1f4efb31329";
+    hash = "sha256-9wfFV1sPhqpNM50JwswPaz2LJgKfHUUjFCJCjuto9oo=";
   };
 
   sourceRoot = "${src.name}/codex-cli";
 
-  npmDepsHash = "sha256-riVXC7T9zgUBUazH5Wq7+MjU1FepLkp9kHLSq+ZVqbs=";
+  npmDepsHash = "sha256-mhfZf3JASsJ72gpiXsILaCVHrsq7GaMUCkfNnyRJDl0=";
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
